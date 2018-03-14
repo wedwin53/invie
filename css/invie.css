@@ -1,19 +1,100 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?5jrugc');
+  src:  url('../fonts/icomoon.eot?5jrugc#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?5jrugc') format('truetype'),
+    url('../fonts/icomoon.woff?5jrugc') format('woff'),
+    url('../fonts/icomoon.svg?5jrugc#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-phone:before {
+  content: "\e942";
+}
+.icon-envelop:before {
+  content: "\e945";
+}
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-close:before {
+  content: "\ea0d";
+}
+
+
 body{
 	font-family: 'Allerta', sans-serif;	
 	margin: 0px;
 }
+input, textarea{
+	outline: 0;
+}
+input:focus, textarea: focus{
+	background: lightgray;
+}
+table{
+	width: 100%;
+
+}
+th{
+	background: #273b47;
+	color: white;
+	padding: 10px;
+	text-align: left;
+	padding-left: 20px;
+}
+td {
+	padding: 20px;
+}
+
+table, td, th{
+	border: 1px solid #273b47;
+	border-collapse: collapse;
+}
+.contenedor{
+	max-width: 800px;
+	margin: auto;
+	position: relative;
+}
+.background{
+	background-image: url("../images/background.png");
+	background-size: cover;
+}
 .button{
-	border-radius: 5px;
+	border-radius: 12px;
 	background: #fd324e;
 	color: white;
 	border: none;
-	padding: 7px;
+	padding: 7px 12px;
+	cursor: pointer;
+	text-decoration: none;
+	font-size: 18px;
+	background: linear-gradient(to left, #fe344e, #ff7250);
 }
 .titulo{
 	font-size: 70px;
 	font-family: 'Montserrat', sans-serif;
 	margin-bottom: 0px;
 	margin-top: 70px;
+}
+.titulo span{
+	text-decoration: underline;
 }
 .title-a{
 	font-size: 24px;
@@ -26,6 +107,7 @@ body{
 }
 .guitarras{
 	color: #1F313C;
+	margin-bottom: 60px;
 }
 
 .guitarras h2{
@@ -33,9 +115,9 @@ body{
 	font-family: 'Montserrat', sans-serif;
 }
 .portada{
-	background-image: url("../images/background.png");
 	color: white;
 	padding: 20px;
+	height: 500px;
 }
 .portada button{
 	margin-bottom: 70px;
@@ -50,12 +132,19 @@ body{
 	display: inline-block;
 	margin-left: 30px;
 }
+.menu li:before{
+	content: "∘";
+	font-size: 50px;
+	line-height: 20px;
+	color: white;
+}
+.menu a{
+	color: white;
+	text-decoration: none;
+}
 .logotipo{
 	display: inline-block;
-}
-.contenedor{
-	width: 800px;
-	margin: auto;
+	margin-left: 0;
 }
 .derecha {
 	float: right;
@@ -65,11 +154,10 @@ body{
 .izquierda{
 	float: left;
 	position: relative;
-	top: 80px;
 }
 .guitarra{
 /*	overflow: hidden;*/
-	margin: 10px;
+	margin: 10px 10px 40px 10px;
 	padding: 10px;
 	border: 1px solid #1F313C;
 	border-radius: 8px;
@@ -77,19 +165,23 @@ body{
 .guitarra ol{
 	padding: 0px;
 }
+.guitarra.b{
+	height: 190px;
+}
 .contenedor-guitarra-a{
-	
 	padding-left: 20px;
-
 }
 .contenedor-guitarra-b{
 	margin-left: 370px;
+	position: relative;
+	bottom: 90px;
 }
 .header{
 	position: relative;
 }
 .footer{
 	background: #273b47;
+	padding: 50px 10px;
 }
 .contacto {
 	display: flex;
@@ -116,7 +208,6 @@ body{
 	display: flex;
 	width: 400px;
 	color: white;
-	padding: 50px 10px;
 }
 .col1, .col2{
 	display: flex;
@@ -128,6 +219,9 @@ body{
 .col2{
 	align-items: flex-start;
 }
+.col2 .button{
+	margin-top: 15px;
+}
 .intereses label{
 	font-size: 10px;
 }
@@ -138,22 +232,169 @@ body{
 	margin-top: 10px;
 	font-size: 10px;
 }
-table{
-	width: 100%;
-
-}
-th{
-	background: #273b47;
-	color: white;
-	padding: 10px;
-	text-align: left;
-	padding-left: 20px;
-}
-td {
-	padding: 20px;
+.tabla{
+	margin: 50px 0 50px 0;
 }
 
-table, td, th{
-	border: 1px solid #273b47;
-	border-collapse: collapse;
+.burguer-button{
+	width: 40px;
+	border-radius: 50%;
+	line-height: 40px;
+	height: 40px;
+	background: #395667;
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	z-index: 3;
+
+}
+
+@media screen and (max-width: 800px){
+	.titulo{
+		font-size: 45px;
+		margin-top: 30px;
+	}
+	.title-a{
+		font-size: 18px;
+	}
+	.portada{
+		height: auto;
+	}
+	.portada .button{
+		margin-bottom: 30px;
+		display: inline-block;
+	}
+	/*guitarras*/
+	.guitarras{
+		text-align: center;	
+	}
+	.izquierda, .derecha{
+		float: none;
+		position: static;
+	}
+	.title-b{
+		margin: 0;
+	}
+	.guitarra li{
+		list-style: none;
+	}
+	.guitarra.b{
+		height: auto;
+	}
+	.contenedor-guitarra-b{
+		position: static;
+		margin: 0;
+	}
+	.contenedor-guitarra-a{
+		padding: 0;
+	}
+
+}
+@media screen and (max-width: 767px){
+	.footer .contenedor{
+		display: block;
+
+	}
+	.contacto{
+		margin: 0 auto;
+	}
+	.formulario{
+		display: block;
+		margin: 0 auto;
+		width: 300px;
+	}
+	.intereses label{
+		display: block;
+		font-size: 16px;
+	}
+	.col1{
+		margin: 0;
+	}
+	input[type="text"],
+	input[type="E-mail"]{
+		font-size: 16px;
+		padding: 5px;
+	}
+	input[type="radio"],
+	input[type="checkbox"]{
+		zoom: 1.5;
+	}
+	textarea{
+		width: 100%;
+	}
+}
+
+
+@media screen and (max-width: 650px){
+	.header{
+		text-align: center;
+	}
+	.logotipo{
+		margin: 0;
+	}
+	.menu{
+		position: static;
+		display: block;
+	}
+	.menu li:first-child{
+		margin: 0;
+	}
+	.menu ul{
+		padding: 0;
+	}
+}
+@media screen and (max-width: 500px){
+	.portada .contenedor{
+		position: static;
+	}
+	.menu{
+		background: rgba(255, 60, 88, .8);
+		position: absolute;
+		left: -100%;
+		top: 0;
+		z-index: 2;
+		bottom: 0;
+		right: 0;
+		display: flex;
+		width: 100%;
+		align-items: center;
+		transition: .3s;
+	}
+	.menu.active{
+		left: 0;
+	}
+	.menu ul{
+		flex: 1;
+	}
+	.menu li{
+		display: block;
+		margin: 0;
+		padding: 8px 0;
+		border-bottom: 1px solid white;
+	}
+	.menu li:before{
+		display: none;
+	}
+	.menu li:first-child{
+		border-top: 1px solid white;
+
+	}
+	.portada{
+		text-align: center;
+	}
+	.titulo{
+		font-size: 30px;
+	}
+	.title-a{
+		font-size: 15px;
+	}
+	.guitarra img{
+		width: 200px;
+	}
+	.title-b{
+		font-size: 30px;
+	}
 }
