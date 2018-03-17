@@ -245,14 +245,23 @@ table, td, th{
 	display: inline-block;
 	text-align: center;
 	cursor: pointer;
-	position: absolute;
+	position: fixed;
 	left: 20px;
 	top: 20px;
+	color: white;
 	z-index: 3;
+	display: none;
 
 }
 
 @media screen and (max-width: 800px){
+	.tabla{
+		margin: 50px 20px;
+	}
+	.tabla .contenedor{
+		overflow: auto;
+		border: 1px solid #273b47;
+	}
 	.titulo{
 		font-size: 45px;
 		margin-top: 30px;
@@ -347,12 +356,30 @@ table, td, th{
 	}
 }
 @media screen and (max-width: 500px){
+	.portada .button{
+		display: block;
+	}
+	.col2 {
+		align-items: stretch;
+	}
+	.precios .header .logotipo{
+		margin: 50px 0;
+	}
+	.burguer-button{
+		display: block;
+	}
 	.portada .contenedor{
+		position: static;
+	}
+	.header{
+		position: static;
+	}
+	.header .contenedor{
 		position: static;
 	}
 	.menu{
 		background: rgba(255, 60, 88, .8);
-		position: absolute;
+		position: fixed;
 		left: -100%;
 		top: 0;
 		z-index: 2;
@@ -396,5 +423,25 @@ table, td, th{
 	}
 	.title-b{
 		font-size: 30px;
+	}
+}
+
+.video-responsive-contenedor{
+	position: relative;
+	padding-top: 56.25%;
+}
+.video-responsive-src{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2){
+	.background{
+		background-image: url("../images/background2x.png");
 	}
 }
